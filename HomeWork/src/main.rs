@@ -7,8 +7,8 @@ fn main() {
 
 fn Homework1() {
     let mut checkChildren = false;
-    let org_arr: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let sub_arr: [i32; 4] = [5, 6, 7, 8];
+    let org_arr: [i32; 8] = [1, 2,3,5,6,8, 10, 11];
+    let sub_arr: [i32; 3] = [6,8,10];
     if org_arr.contains(&sub_arr[0]) {
         let mut a = 0;
         let x = org_arr.len()-sub_arr.len();
@@ -42,7 +42,7 @@ fn Homework2() {
     let mut output = String::new();
     let mut count = 0;
     for char in input.chars() {
-        if character == char.to_string() {
+        if character.to_uppercase() == char.to_string().to_uppercase() {
             count += 1;
         } else {
             output.push(char)
