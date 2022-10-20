@@ -7,20 +7,26 @@ fn main() {
 
 fn Homework1() {
     let mut checkChildren = false;
-    let org_arr: [i32; 8] = [1, 2,3,5,6,8, 10, 11];
-    let sub_arr: [i32; 3] = [6,8,10];
+    let org_arr: [i32; 8] = [1, 3,4,10,6,8, 10, 11];
+    let sub_arr: [i32; 3] = [6,8,11];
     if org_arr.contains(&sub_arr[0]) {
         let mut a = 0;
+        let mut b = 0;
         let x = org_arr.len()-sub_arr.len();
+        let mut y = 0;
         while a < x {
             if org_arr[a] == sub_arr[0] {
-                let mut b = 0;
                 while b < sub_arr.len() {
                     if org_arr[a+b] == sub_arr[0+b] {
                         b+=1;
                         checkChildren = true;
+                        y+=1;
+                        if x == y {
+                            break;
+                        }
                     } else {
                         checkChildren = false;
+                        y=0;
                         break;
                     }
                 }
